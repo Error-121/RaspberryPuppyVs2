@@ -64,7 +64,7 @@ jobs:
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-        publish-profile: ${{ secrets.RaspberryPuppyV2_1431 }}
+        publish-profile: ${{ secrets.RaspberryPuppyV2_8539 }}
     - name: Azure Login
       uses: azure/login@v1
       with:
