@@ -11,15 +11,15 @@ builder.Services.AddTransient<GenericPuppy<TripData>, GenericPuppy<TripData>>();
 
 builder.Services.AddControllers();
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+//builder.Services.AddEndpointsApiExplorer();
+//builder.Services.AddSwaggerGen();
 
 //var connectionString = builder.Configuration.GetConnectionString("RaspberryPuppyDB");
 
 var app = builder.Build();
 
-app.UseSwagger();
-app.UseSwaggerUI();
+//app.UseSwagger();
+//app.UseSwaggerUI();
 
 // Configure the HTTP request pipeline.
 
