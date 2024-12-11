@@ -12,7 +12,6 @@ builder.Services.AddTransient<GenericPuppy<TripData>, GenericPuppy<TripData>>();
 builder.Services.AddControllers();
 
 
-
 //var connectionString = builder.Configuration.GetConnectionString("RaspberryPuppyDB");
 
 var app = builder.Build();
