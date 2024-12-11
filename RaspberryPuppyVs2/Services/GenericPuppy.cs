@@ -10,9 +10,9 @@ namespace RaspberryPuppyVs2.Services
 		private readonly PuppyDbContext _context;
 		private readonly DbSet<T> _dbSet;
 
-		public GenericPuppy()
+		public GenericPuppy(PuppyDbContext context)
 		{
-			_context = new PuppyDbContext();
+			_context = context;
 			_context.Database.EnsureCreated();
 			_dbSet = _context.Set<T>();
 

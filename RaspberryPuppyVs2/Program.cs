@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using RaspberryPuppyVs2.Data.EFDbContext;
 using RaspberryPuppyVs2.Models;
 using RaspberryPuppyVs2.Services;
@@ -5,7 +6,10 @@ using RaspberryPuppyVs2.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<PuppyDbContext>();
+builder.Services.AddDbContext<PuppyDbContext>(options 
+	=> options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
+
 builder.Services.AddTransient<GenericPuppy<Personality>, GenericPuppy<Personality>>();
 builder.Services.AddTransient<GenericPuppy<TripData>, GenericPuppy<TripData>>();
 
